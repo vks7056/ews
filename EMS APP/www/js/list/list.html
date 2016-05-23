@@ -1,0 +1,125 @@
+<link href="js/list/list.css" rel="stylesheet">
+
+<ion-view show-nav-bar="true" drag-content="true"> 
+
+    <ion-header-bar class="bar-positive"> 
+     <div side="left">
+     <button menu-toggle="left" class="button button-icon ion-navicon show" ></button></div>      
+
+      <h2 class="title title-center">Collection List</h2> 
+
+      <a class="button button-icon icon-left ion-ios-information-outline" href="#"> </a>
+
+    </ion-header-bar>
+
+    <div class="bar bar-subheader item-input-inset bar-light">
+      <label class="item-input-wrapper">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input type="search" ng-model="searchText" placeholder="search" />
+      </label>
+    </div>
+    <ion-content class="has-subheader">
+
+      <ion-list class="article" >
+
+          <ion-item ng-repeat="item in products | filter:searchText" class="item-thumbnail-left item-icon-right item-text-wrap">
+            
+             
+
+            <a href="#/app/list/{{item.product_id}}">
+	            <img ng-src="{{item.img}}" alt="{{item.name}}">
+	            <span class="ng-binding">{{item.sku}}</span>
+	            <span class="ng-binding">{{item.title}}</span>
+	            <span class="ng-binding">{{item.commerce_price}}</span>
+            </a>
+
+
+
+           <button class="button button-clear icon-ion-star button-assertive"></button>
+
+          <!--  <ion-option-button class="button-dark" ng-click="toggleStar(item)"><i class="icon ion-star"></i></ion-option-button> -->
+
+           
+          </ion-item>
+
+      </ion-list>
+
+
+
+    <script id="modal-2.html" type="text/ng-template">
+      <div class="modal">
+        <header class="bar bar-header bar-positive">
+          <h1 class="title">FILTTER</h1>
+          <div class="button button-clear" ng-click="closeModal(2)"><span class="icon ion-close"></span></div>
+        </header>
+        <content has-header="true" padding="true">
+          <div class="list">
+
+            <div class="item item-divider" style="padding-top:55px;">
+              Price
+            </div>
+            <div class="list  row">
+            <div class="radio col col-50">
+                <label><input type="radio" class="inpulclass" ng-model="user1.sub_price" name="rdoResult" value="ASC">Low to High</label>
+             </div>
+            <div class="radio col col-50">
+                <label><input type="radio" class="inpulclass" ng-model="user1.sub_price" name="rdoResult" value="DESC">High to Low</label>
+            </div>
+
+              
+            </div> 
+
+
+           <div class="list ">
+            <label class="item item-input item-select ">
+
+                <div class="input-label">
+                  Search by Item 
+                </div>
+                <select ng-model="user1.sub_prod">               
+                  <option ng-selected="true">Necklace</option>
+                  <option>Earrings</option>
+                  <option>Bangles</option>
+                </select>
+              </label>            
+            </div>
+
+
+             <div class="list">
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Search by Type 
+            </div>
+            <select ng-model="user1.sub_prod2">           
+              <option ng-selected="true">Jewellery</option>              
+              <option>Collection</option>
+            </select>
+          </label>
+           
+        </div>     
+       
+          </div> 
+      
+
+         
+
+   
+   <label class="">          
+          <button class="button button-block button-calm" data-ng-click="sort(user1)">Apply</button>
+        </label>
+      
+      </div>
+    </script>
+
+    </ion-content>
+
+      <ion-tabs class="tabs-positive tabs-icon-top">
+
+       
+
+        <ion-tab title="ADVANCED FILTTER" icon-on="ion-ios-color-filter" icon-off="ion-ios-color-filter" ng-click="openModal(2)" >
+          <!-- Tab 2 content -->
+      </ion-tab>
+    </ion-tabs>
+   
+</ion-view> 

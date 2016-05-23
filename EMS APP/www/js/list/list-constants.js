@@ -1,0 +1,1 @@
+// var urlPath = BASE_URL + "products/listing-page";

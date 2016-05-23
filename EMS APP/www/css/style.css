@@ -1,0 +1,52 @@
+/* Empty. Add your own CSS if you like */
+
+.star .item-content {
+	background-color: #EEE8D6 !important;
+}
+
+
+
+.splash {
+	
+	z-index: -9;
+	background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+}
+
+.branding {
+	width:50%; 
+	max-width: 200px; 
+	margin: 0 auto; 
+	text-align:center;
+	margin-top:20px;
+}
+
+.pro-detail {width: 100%;}
+
+.tabs-positive > .tabs, .tabs.tabs-positive {
+    background-color: #042a44;
+    background-image: linear-gradient(0deg, #0c60ee, #0c60ee 50%, transparent 50%);
+    border-color: #042a44;
+    color: #fff;
+}
+.homepage {background: url(../../img/bg1.jpg) left top no-repeat; background-size: 100%;}
+.bar .button.button-clear .icon::before, .bar .button.button-clear.icon::before, .bar .button.button-clear.icon-left::before, .bar .button.button-clear.icon-right::before, .bar button.button-clear .icon::before, .bar button.button-clear.icon::before, .bar button.button-clear.icon-left::before, .bar button.button-clear.icon-right::before {font-size: 20px;
+    line-height: 30px;
+    padding-right: 5px;}
+
+.bar.bar-positive {    
+	background-color: #042a44;
+    background-image: linear-gradient(0deg, #0c60ee, #0c60ee 50%, transparent 50%);
+    border-color: #042a44;
+    color: #fff;
+}
+
+.title-center {text-align: center !important;}
+.slider {height: 98%; text-align:center;}
+.scroll {height: 98%;}
+
+.homestrip {position: absolute; bottom: 0px; width: 101%; text-align:center; background: #042a44; border:none; color: #fff; font-size: 16px;}
+.homestrip a {color: #fff; text-decoration: none;}
+

@@ -1,0 +1,37 @@
+  .delivery-order { 
+    padding-top: 5px;}
+.ng-binding {
+    padding-top:0px !important;
+}
+.delivery-order h5 {
+    color: #7d7d7d;
+    font: 400 13px/18px "Roboto Lt","roboto","Droid Sans",sans-serif;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.process-delivery ul {
+    text-align: center;
+}
+.process-delivery ul li {
+    display: inline-block;
+    padding: 0 10px;
+}
+.process-delivery ul li a {
+    display: block;
+    width: 82px;
+    text-decoration: none;
+}
+.process-delivery ul li a figure {
+    margin: 0 auto;
+    width: 42px;
+}
+.process-delivery ul li a figcaption {
+    color: #8d8d8d;
+    font: 400 10px/18px "Roboto Lt","roboto","Droid Sans",sans-serif;
+    text-align: center;
+}
+.item p {
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 2px;
+}

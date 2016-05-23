@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>EMS</title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+     <link href="css/homepage.css" rel="stylesheet">
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-messages.js"></script>  
+
+    <!-- Include facebook components -->
+    <script src="js/openfb.js"></script>
+    <script src="js/ngopenfb.js"></script>
+   
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+    <script src="js/sha1.js"></script>
+
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <script src="cordova.js"></script>
+  
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+
+    <!-- your controller's js -->   
+    <script src="js/controller.js"></script>
+    <script src="js/enqueryCtrl.js"></script>
+    <script src="js/list/list-constants.js"></script>
+    <script src="js/list/list-controller.js"></script>
+    <script src="js/list/list-service.js"></script>
+   </head>
+  <body ng-app="starter" animation="slide-left-right-ios7">
+
+    <ion-nav-view></ion-nav-view>
+
+
+     <script id="intro.html" type="text/ng-template"> 
+      <ion-view left-buttons="leftButtons" right-buttons="rightButtons" class="homepage">
+
+        <div>
+          <ion-slide>            
+            <div id="logo">
+              <img src="img/logo1.png" />
+            </div>
+            <div class="square">
+              <div class="list">
+   <label class="item item-input item-stacked-label" style="border:none">
+   <span class="input-label">Consumer No.</span>
+   <input type="text" placeholder="Consumer No.">
+   </label>
+
+   <label class="item item-input item-stacked-label">
+   <span class="input-label">Mobile No.</span>
+   <input type="text" placeholder="Mobile No">
+   </label>
+   <div class="padding">
+        <button class="button button-block button-positive" data-ng-click="formSubmit()" >Submit</button>
+      </div></div></div></ion-slide> 
+        </div>
+      
+        </div>
+      </ion-view>
+    </script>
+  </body>
+</html>
