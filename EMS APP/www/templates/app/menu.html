@@ -1,0 +1,66 @@
+<style type="text/css">
+  .logo {background:#fe1413; text-align:center; padding-bottom:10px; padding-top:20px;}
+
+</style>
+
+<ion-side-menus>
+  <ion-pane ion-side-menu-content>
+<!--     <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button class="button-clear"><i class="icon ion-chevron-left"></i> Back</ion-nav-back-button>
+    </ion-nav-bar> -->
+    <ion-nav-view name="menuContent" animation="slide-left-right" ></ion-nav-view>
+  </ion-pane>
+
+
+
+  <ion-side-menu side="left" >
+    <header class="bar bar-header bar-positive hide" >
+      <h1 class="title">Menu </h1>
+    </header>
+    <ion-content class="bar-positive">
+     <div class="logo">
+      <img src="img/logo1.png" alt="">
+    </div>
+      <ion-list>
+        <ion-item nav-clear menu-close href="#/app/home" nav-transition="android">
+          Home
+        </ion-item>
+      
+        <!-- <ion-item menu-close id="login" href="#/app/login" nav-transition="android">
+          Login
+        </ion-item>
+
+         <ion-item menu-close id="logout"  ng-click="logout()" value="Log out" nav-transition="android" style="display: none">
+          Logout
+        </ion-item> -->
+        <ion-item nav-clear menu-close href="#/app/contact" nav-transition="android">
+          Contact
+        </ion-item>
+        
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
+
+
+
+<!-- <ion-tabs class="tabs-icon-top tabs-positive">
+
+  <ion-tab title="Home" icon="ion-home"
+    href="#/app/home">
+    <ion-nav-view name="home-tab"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="Collection" icon="ion-ios-people"
+    href="#/app/list">
+    <ion-nav-view name="list-tab"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="Contact" icon="ion-android-contact"
+    href="#/app/contact">
+    <ion-nav-view name="contact-tab"></ion-nav-view>
+  </ion-tab>
+
+
+
+</ion-tabs> -->

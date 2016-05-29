@@ -1,0 +1,80 @@
+<link href="css/collection.css" rel="stylesheet">
+<div>
+ <ion-header-bar class="bar-positive"> 
+ <div class="hamburger" side="left">
+   <button menu-toggle="left" class="button button-icon ion-navicon show" ></button></div> 
+   <img src="img/mukesh.png" />  
+   <h2 class="title"> Hi Mukesh (100677485)</h2> 
+   <a class="button button-clear" href=""> Logout</a>  
+
+ </ion-header-bar>
+
+ <ion-content class="collection_page">
+ <div class="list ">
+  <a class="banners item Pro" data-ng-click="proId('Gold')"  href="#/app/list">
+    <img src="img/gold_collection.jpg">
+  </a>
+</div>
+<div class="item text-center usage">
+	Your Usage as on 31st May, 12:45 pm
+</div>
+<div class="item item-text-wrap text-center">
+  <img src="img/consumed.png">
+</div>
+
+<div class=" item text-center">
+	10 days till next bill cycles
+</div>
+<div class=" item text-center">
+  <h2 class="billing">Billing Summary</h2>
+</div>
+<div class="billing_cycles card">
+  <div class="item item-text-wrap">
+  <div class="row">
+  <div class="col col-60"><span>&#8377 </span>1704.08 <br>
+  <span>Outstanding amount</span> <br> <h4>DUE IMMEDIATELY</h4> </div>
+  <div class="col col-40"><button class="button button-light" ng-click="goPayment()">
+  Pay Now
+</button></div>
+  
+</div>
+  </div>
+</div>
+<div class="card latest-bill">
+  <div class="item item-text-wrap">
+  <div class="row">
+    <div class="col col-50" style="border-right: solid 1px #ccc; margin-right: 10px;">LATEST BILL <br>
+    <h3><span>&#8377 </span>1704.08 </h3>April'16</div>
+    <div class="col col-50">LAST PAYMENT <br>
+    <h3><span>&#8377 </span>1704.08 </h3>April'16</div>
+    </div>
+
+      <div class="row unbill-amount">
+    <div class="col col-70" >UNBILLED AMOUNT <br>
+   As on 14th May, 12:46 PM</div>
+    <div class="col col-30">
+    <h3><span>&#8377 </span>363.19 </h3></div>
+    </div>
+  </div>
+</div>
+
+
+<div class=" item text-center richarge">
+  PAY BILL FOR FRIENDS & FAMILY
+  <div class="list list-inset">
+  <label class="item item-input">
+    <input type="text" placeholder="PAY BILL FOR FRIENDS & FAMILY">
+    <button class="button button-small btns">
+      GO
+    </button>
+  </label>
+ 
+</div>
+</div>
+
+
+
+
+</ion-content>
+
+</div>

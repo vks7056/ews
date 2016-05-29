@@ -1,5 +1,47 @@
-.loginPages {
-border:solid 2px red;
-background: url(../img/bg1.jpg) left top no-repeat; 
-background-size: 100%;
-}
+ .homepage .slider {
+            height: 100%;
+          }
+      .homepage .slider-slide {
+            padding-top: 30px;
+            color: #fff;
+            /*background-color:#071e2e;*/
+            text-align: center;
+
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+            font-weight: 300;
+          }
+
+          .square { background: #fff; width: 300px; margin: 0 auto; border-radius: 10px;  padding: 20px 0px 0px; }
+
+          .homepage #logo {
+            margin: 30px 0px;
+            text-align: center;
+          }
+
+          .homepage #list {
+            width: 170px;
+            margin: 30px auto;
+            font-size: 20px;
+          }
+          .homepage #list ol {
+            margin-top: 30px;
+          }
+          .homepage #list ol li {
+            text-align: left;
+            list-style: decimal;
+            margin: 10px 0px;
+          }
+
+           .homepage h3:first-child, .h3:first-child {
+              color: #fff;
+              margin-top: 0;
+          }
+
+           .homepage h5:first-child, .h3:first-child {
+              color: #fff;
+              margin-top: 0;
+          }
+
+          .skipIntro {position: absolute; bottom:100px; /*background: #042a44;*/ padding: 10px; z-index: 999; text-align: center; width: 80%; margin: 0 auto; left: 10%; }
+
+          .skipIntro a {text-decoration: none; color: #fff;}

@@ -19,10 +19,10 @@ angular.module('starter', ['ionic', 'starter.controllers' , 'ngOpenFB','ngMessag
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-    .state('intro', {
+    .state('login', {
       url: '/',
-      templateUrl: 'intro.html',
-      controller: 'IntroCtrl'
+      templateUrl: 'templates/login/login.html',
+      controller: 'LoginCtrl'
     })
      .state('app', {
         url: "/app",
@@ -36,7 +36,7 @@ angular.module('starter', ['ionic', 'starter.controllers' , 'ngOpenFB','ngMessag
       url: '/home',
       views: {
         'menuContent' : {
-          templateUrl: 'templates/home.html',
+          templateUrl: 'templates/home/home.html',
            controller: 'AgendaCtrl'
         }
       }
@@ -47,23 +47,23 @@ angular.module('starter', ['ionic', 'starter.controllers' , 'ngOpenFB','ngMessag
       url: '/payment',
       views: {
         'menuContent' : {
-          templateUrl: 'templates/payment.html'
+          templateUrl: 'templates/payment/payment.html'
           
          
         }
       }
     })
 
-     .state('app.login', {
-      url: '/login',
-      views: {
-        'menuContent' : {
-          templateUrl: 'templates/login.html',
-           controller: 'LoginCtrl'
+    //  .state('app.login', {
+    //   url: '/login',
+    //   views: {
+    //     'menuContent' : {
+    //       templateUrl: 'templates/login.html',
+    //        controller: 'LoginCtrl'
          
-        }
-      }
-    })
+    //     }
+    //   }
+    // })
 
   $urlRouterProvider.otherwise('/');
 });
