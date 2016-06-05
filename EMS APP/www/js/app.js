@@ -54,6 +54,27 @@ angular.module('starter', ['ionic', 'starter.controllers' , 'ngOpenFB','ngMessag
       }
     })
 
+
+    .state('app.checkout', {
+      url: '/checkout',
+      views: {
+        'menuContent' : {
+          templateUrl: 'templates/checkout/checkout.html'
+        }
+      }
+    })
+
+    .state('app.thanks', {
+      url: '/thanks',
+      views: {
+        'menuContent' : {
+          templateUrl: 'templates/thanks/thanks.html'
+          
+         
+        }
+      }
+    })
+
     //  .state('app.login', {
     //   url: '/login',
     //   views: {
