@@ -5,7 +5,7 @@
 .collection_page .item a {padding: 0px;}
 .hamburger {width: 45px; padding-left: 0px;}
 .bar .title {text-align: left; padding-left:20px;}
-.usage {font-size: 20px; color:#fe1413;}
+.usage {font-size: 18px; color:#fe1413;}
 .item .billing {font-size: 20px; line-height: 40px;}
 .billing_cycles {margin-top: 0px; }
 .billing_cycles .item {background-color:#fe1413; color: #fff; font-size: 22px;}
@@ -38,3 +38,24 @@
 .collection_page .btns {    padding: 4px 15px;
     background: red;
     color: #fff; margin-right: 5px;}
+
+   .consumed { 
+    background: url(../../img/consumed.png) center center no-repeat;
+    width: 100%;
+    height: 216px;
+    display: inline-block;
+    margin: 0 auto;
+    font-size:14px;
+    font-weight:500;
+    padding-top: 78px;
+
+        h3 {
+            color:#ff1515;
+            font-size:18px;
+        }
+
+         span {
+            
+            font-size:13px;
+        }
+    } 

@@ -1,42 +1,42 @@
 angular.module('starter.controllers')
- .controller('LoginCtrl', function($scope, $state,$timeout,$ionicLoading, $location, $http) {
+ .controller('LoginCtrl', function($scope, $state,$timeout,$ionicLoading, $location, $http, appSvc, $rootScope) {
 
     $scope.formSubmit = function() {   
 
-      $state.go('app.home'); 
+     // $state.go('app.home'); 
 
-  //   	 $scope.user = {
-  //                   "ca": $scope.ca,
-  //                   "mobile": $scope.mobile              
-  //       };
+    	 $scope.user = {
+                    "ca": $scope.ca,
+                    "mobile": $scope.mobile              
+        };
 
-  //   	$http({
-		//     url: 'http://crazyninja.org/ewsdrupal/?q=ews/ews-user-detail',
-		//     dataType: 'json',
-		//     method: 'POST',
-		//     data: '',
-		//     headers: {
-		//         "Content-Type": "application/json"
-		//     }
+       $scope.user = angular.toJson($scope.user);
+       localStorage.setItem("user", $scope.user);
+    	 appSvc.createUser($scope.user).then(function (data) {
+                    $rootScope.item = data;
+                    localStorage.setItem("data", angular.toJson(data));
+                       if (data.error) {
+                        $scope.errorPoP = true;
+                        $scope.message = data.errormsg;
+                    } else {
+                        $state.go('app.home');
+                    }                   
+                    
+                    $rootScope.loader = false;
+                }, function (data) {
+                    console.log('Error--', data);
+                    $rootScope.loader = false;
+                });
 
-		// }).success(function(response){
-		// 	console.log("success");
-		//     $scope.response = response;
-		    
-    
-		// }).error(function(error){
-		//     $scope.error = error;
-		// });
+		var coname = $scope.consumerNo;
+    var monum = $scope.mobileNo;
 
-		// var coname = $scope.consumerNo;
-  //   var monum = $scope.mobileNo;
-
-  //   if($scope.consumerNo == '' && $scope.mobileNo == '') {
-  //       window.location.hash = '#/app/home'
-  //       $location.path('/home');
-  //       }else {
-  //         alert('Wrong Stuff');
-  //       }
+    // if($scope.consumerNo == '' && $scope.mobileNo == '') {
+    //     window.location.hash = '#/app/home'
+    //     $location.path('/home');
+    //     }else {
+    //       alert('Wrong Stuff');
+    //     }
     	
 
     	

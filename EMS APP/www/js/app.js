@@ -28,8 +28,7 @@ angular.module('starter', ['ionic', 'starter.controllers' , 'ngOpenFB','ngMessag
         url: "/app",
         cache: false,
         abstract: true,
-        templateUrl: "templates/menu.html",
-        controller: 'ListController'
+        templateUrl: "templates/menu.html"       
     })
 
     .state('app.home', {

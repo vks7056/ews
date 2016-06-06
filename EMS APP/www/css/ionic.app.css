@@ -9855,6 +9855,12 @@ a.button {
   color: #fff;
   text-decoration: none; }
 
+input.error {
+  border: solid 1px red; }
+
+.help-inline {
+  color: #b94a48; }
+
 .collection_page .banners img {
   width: 100%; }
 
@@ -9881,7 +9887,7 @@ a.button {
   padding-left: 20px; }
 
 .usage {
-  font-size: 20px;
+  font-size: 18px;
   color: #fe1413; }
 
 .item .billing {
@@ -9951,6 +9957,21 @@ a.button {
   background: red;
   color: #fff;
   margin-right: 5px; }
+
+.consumed {
+  background: url(../../img/consumed.png) center center no-repeat;
+  width: 100%;
+  height: 216px;
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 500;
+  padding-top: 78px; }
+  .consumed h3 {
+    color: #ff1515;
+    font-size: 18px; }
+  .consumed span {
+    font-size: 13px; }
 
 .Collection .item {
   text-align: center; }

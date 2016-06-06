@@ -4,7 +4,7 @@
    <button menu-toggle="left" class="button button-icon ion-navicon show" ></button></div> 
    <img src="img/mukesh.png" />  
    <h2 class="title"> Hi Mukesh (100677485)</h2> 
-   <a class="button button-clear" href=""> Logout</a>  
+   
 
  </ion-header-bar>
 
@@ -14,11 +14,11 @@
     <img src="img/gold_collection.jpg">
   </a>
 </div>
-<div class="item text-center usage">
+<div class="item item-text-wrap text-center usage">
 	Your Usage as on 31st May, 12:45 pm
 </div>
-<div class="item item-text-wrap text-center">
-  <img src="img/consumed.png">
+<div class="item item-text-wrap text-center consumed">
+ Consumed <h3> {{item.current_meter_reading}} </h3> <span>Kilowatts({{item.unit}})</span>
 </div>
 
 <div class=" item text-center">
@@ -30,7 +30,8 @@
 <div class="billing_cycles card">
   <div class="item item-text-wrap">
   <div class="row">
-  <div class="col col-60"><span>&#8377 </span>1704.08 <br>
+  <div class="col col-60"><span>&#8377 </span>
+  {{item.outstanding_amount}}<br>
   <span>Outstanding amount</span> <br> <h4>DUE IMMEDIATELY</h4> </div>
   <div class="col col-40"><button class="button button-light" ng-click="goPayment()">
   Pay Now
@@ -45,14 +46,14 @@
     <div class="col col-50" style="border-right: solid 1px #ccc; margin-right: 10px;">LATEST BILL <br>
     <h3><span>&#8377 </span>1704.08 </h3>April'16</div>
     <div class="col col-50">LAST PAYMENT <br>
-    <h3><span>&#8377 </span>1704.08 </h3>April'16</div>
+    <h3><span>&#8377 </span>{{item.previous_paid_amount}} </h3>April'16</div>
     </div>
 
       <div class="row unbill-amount">
     <div class="col col-70" >UNBILLED AMOUNT <br>
    As on 14th May, 12:46 PM</div>
     <div class="col col-30">
-    <h3><span>&#8377 </span>363.19 </h3></div>
+    <h3><span>&#8377 </span>{{item.unbilled_amount}}</h3></div>
     </div>
   </div>
 </div>
