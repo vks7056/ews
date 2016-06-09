@@ -18,7 +18,7 @@
 	Your Usage as on 31st May, 12:45 pm
 </div>
 <div class="item item-text-wrap text-center consumed">
- Consumed <h3> {{item.current_meter_reading}} </h3> <span>Kilowatts({{item.unit}})</span>
+ Consumed <h3> <span style=" top: -7px;left:-11px;font-size: 15px;">004</span> {{item.current_meter_reading}} </h3> <span>Kilowatts({{item.unit}})</span>
 </div>
 
 <div class=" item text-center">
@@ -44,7 +44,7 @@
   <div class="item item-text-wrap">
   <div class="row">
     <div class="col col-50" style="border-right: solid 1px #ccc; margin-right: 10px;">LATEST BILL <br>
-    <h3><span>&#8377 </span>1704.08 </h3>April'16</div>
+    <h3><span>&#8377 </span>{{item.latest_amount}} </h3>April'16</div>
     <div class="col col-50">LAST PAYMENT <br>
     <h3><span>&#8377 </span>{{item.previous_paid_amount}} </h3>April'16</div>
     </div>

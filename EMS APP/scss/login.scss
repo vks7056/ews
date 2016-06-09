@@ -13,6 +13,8 @@
 
           .square { background: #fff; width: 300px; margin: 0 auto; border-radius: 10px;  padding: 20px 0px 0px; }
 
+          .square .button.button-positive { background-color: #fe1413;}
+
           .homepage #logo {
             margin: 30px 0px;
             text-align: center;
@@ -81,7 +83,7 @@
     border-color: #042a44;
     color: #fff;
 }
-.homepage {background: url(../../img/bg1.jpg) left top no-repeat; background-size: 100%;}
+.homepage {background: url(../img/bg1.jpg) left top no-repeat; background-size: 100%;}
 .bar .button.button-clear .icon::before, .bar .button.button-clear.icon::before, .bar .button.button-clear.icon-left::before, .bar .button.button-clear.icon-right::before, .bar button.button-clear .icon::before, .bar button.button-clear.icon::before, .bar button.button-clear.icon-left::before, .bar button.button-clear.icon-right::before {font-size: 20px;
     line-height: 30px;
     padding-right: 5px;}

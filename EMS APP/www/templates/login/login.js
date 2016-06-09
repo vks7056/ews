@@ -14,13 +14,15 @@ angular.module('starter.controllers')
        localStorage.setItem("user", $scope.user);
     	 appSvc.createUser($scope.user).then(function (data) {
                     $rootScope.item = data;
-                    localStorage.setItem("data", angular.toJson(data));
+                     localStorage.setItem("data", angular.toJson(data));
                        if (data.error) {
                         $scope.errorPoP = true;
                         $scope.message = data.errormsg;
                     } else {
                         $state.go('app.home');
-                    }                   
+                    }
+                      $scope.ca = "";
+                      $scope.mobile = "";                   
                     
                     $rootScope.loader = false;
                 }, function (data) {
@@ -28,8 +30,8 @@ angular.module('starter.controllers')
                     $rootScope.loader = false;
                 });
 
-		var coname = $scope.consumerNo;
-    var monum = $scope.mobileNo;
+		//var coname = $scope.consumerNo;
+   //var monum = $scope.mobileNo;
 
     // if($scope.consumerNo == '' && $scope.mobileNo == '') {
     //     window.location.hash = '#/app/home'
