@@ -15,19 +15,18 @@
           deferred.reject();
         });
         return deferred.promise;
+      },
+      dataToSubmit: function (data) {
+        var deferred = $q.defer();
+        var api_url = "http://crazyninja.org/ewsdrupal/?q=ews/ews-sms";
+        $http.post(api_url, data).success(function (data) {
+          deferred.resolve(data);
+        }).error(function (data) {
+          console.log("----ERROR------------>", data);
+          deferred.reject();
+        });
+        return deferred.promise;
       }
-      // dataToSubmit: function (data) {
-      //   var deferred = $q.defer();
-      //   var api_url = baseURL + "quiz_service/save_result.json";
-      //   $http.post(api_url, data).success(function (data) {
-      //     deferred.resolve(data);
-      //   }).error(function (data) {
-      //     console.log("----ERROR------------>", data);
-      //     deferred.reject();
-      //   });
-      //   return deferred.promise;
-      // }
-
     };
     return svc;
   });

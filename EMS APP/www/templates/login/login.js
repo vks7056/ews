@@ -1,17 +1,32 @@
 angular.module('starter.controllers')
  .controller('LoginCtrl', function($scope, $state,$timeout,$ionicLoading, $location, $http, appSvc, $rootScope) {
 
+  $scope.loginData = {};
+
     $scope.formSubmit = function() {   
 
      // $state.go('app.home'); 
 
     	 $scope.user = {
-                    "ca": $scope.ca,
-                    "mobile": $scope.mobile              
+                    "ca": $scope.loginData.ca,
+                    "mobile": $scope.loginData.mobile              
         };
+
+      $rootScope.CaName = $scope.loginData.ca,
+      console.log($rootScope.CaName);
+
+
 
        $scope.user = angular.toJson($scope.user);
        localStorage.setItem("user", $scope.user);
+
+      console.log(localStorage.getItem("user")); 
+      $rootScope.userdata = $scope.loginData.mobile;
+
+      console.log($rootScope.userdata);
+
+       
+
     	 appSvc.createUser($scope.user).then(function (data) {
                     $rootScope.item = data;
                      localStorage.setItem("data", angular.toJson(data));

@@ -1,7 +1,25 @@
 angular.module('starter.controllers')
-.controller('checkoutCtrl', function($scope, $timeout, $ionicLoading, $ionicSideMenuDelegate, $state){
+.controller('checkoutCtrl', function($scope, $timeout, $ionicLoading, $ionicSideMenuDelegate, $state, $http, appSvc, $rootScope){
+ 
   $scope.thanks = function() {
-  $state.go('app.thanks');
+     $state.go('app.thanks');
+       //  $scope.user = {             
+       //       "mobile": $scope.mobile               
+       //  };
+       // $scope.user = angular.toJson($scope.user);
+       // localStorage.setItem("user", $scope.user);
+       //  localStorage.getItem("user");
+        //$rootScope.userdata = localStorage.getItem("user");       
+         
+        console.log($rootScope.userdata);
+
+         $http.post("http://crazyninja.org/ewsdrupal/?q=ews/ews-sms", $rootScope.userdata).success(function(data) {
+          console.log("hi");
+          $state.go('app.thanks');          
+        })
+    
+
+  
 }
 
   // Setup the loader

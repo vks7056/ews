@@ -6,6 +6,7 @@ angular.module('starter.controllers', [])
 
 .controller('paymentCtrl', function($scope, $state) {
 
+	
   
 });
 

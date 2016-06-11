@@ -11,6 +11,21 @@
             font-weight: 300;
           }
 
+          .padding {padding:10px 0px 10px 10px;}
+          .loginForms  {
+            input {
+            border: solid 1px #ccc;
+            padding-left: 10px;
+            margin: 5px 0px;
+           }
+            .item {
+              border-width:0px;
+            }
+            .item-input {
+              padding-top:0px;
+            }
+          }
+
           .square { background: #fff; width: 300px; margin: 0 auto; border-radius: 10px;  padding: 20px 0px 0px; }
 
           .square .button.button-positive { background-color: #fe1413;}

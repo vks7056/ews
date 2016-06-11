@@ -9742,6 +9742,20 @@ a.button {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300; }
 
+.padding {
+  padding: 10px 0px 10px 10px; }
+
+.loginForms input {
+  border: solid 1px #ccc;
+  padding-left: 10px;
+  margin: 5px 0px; }
+
+.loginForms .item {
+  border-width: 0px; }
+
+.loginForms .item-input {
+  padding-top: 0px; }
+
 .square {
   background: #fff;
   width: 300px;
@@ -10032,6 +10046,11 @@ input.error {
 .credit-card-box label {
   display: block; }
 
+.input-group-addon {
+  padding: 4px 2px;
+  background-color: #fff;
+  border: none; }
+
 /* The old "center div vertically" hack */
 .credit-card-box .display-table {
   display: table; }
@@ -10043,6 +10062,34 @@ input.error {
   display: table-cell;
   vertical-align: middle;
   width: 50%; }
+
+.item-checkbox {
+  font-size: 14px; }
+
+input:focus {
+  border-color: #00b0de;
+  box-shadow: 0 0 2px #00b0de; }
+
+.dcExpMonth {
+  width: 60px;
+  float: left;
+  margin-right: 6px; }
+
+.dcExpYear {
+  width: 65px;
+  float: left; }
+
+.checkout input {
+  border: 1px solid #ccc; }
+
+.checkout .item {
+  text-align: left; }
+
+.checkout .panel-body {
+  padding: 5px; }
+
+.checkout .form-control {
+  padding: 6px 4px; }
 
 .Payment .row {
   margin-left: 0px; }

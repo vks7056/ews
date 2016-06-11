@@ -26,6 +26,8 @@
 .credit-card-box label {
     display: block;
 }
+
+.input-group-addon {    padding: 4px 2px; background-color:#fff; border:none;}
 /* The old "center div vertically" hack */
 .credit-card-box .display-table {
     display: table;
@@ -38,6 +40,24 @@
     vertical-align: middle;
     width: 50%;
 }
+
+.item-checkbox {    font-size: 14px;}
+
+input:focus {
+    border-color: #00b0de;
+    box-shadow: 0 0 2px #00b0de;
+}
+
+.dcExpMonth {width: 60px; float: left; margin-right:6px;}
+.dcExpYear {width: 65px; float: left; }
+
+.checkout input {    border: 1px solid #ccc;}
+
+.checkout .item {text-align: left;}
+
+.checkout .panel-body {padding:5px}
+
+.checkout .form-control {padding:6px 4px}
 
 .Payment .row {margin-left:0px;}
 

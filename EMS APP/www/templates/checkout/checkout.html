@@ -1,112 +1,135 @@
-
-<ion-pane class="Payment">
-
-<ion-view>
-
-<div class="bar bar-header bar-light">
-<a class="button icon-left ion-chevron-left button-clear" href="#/app/payment"> Back</a>
-  <h1 class="title"><img src="img/small_logo.png" /></h1>
-</div>
-
-<div class="container" >
-<ul class="list">
-<li class="item">
-    <b>Payment Amount of : <span>&#8377</span> {{item.outstanding_amount}}</b>
-</li> 
-</ul>
-<div class="row">
-<!-- You can make it whatever width you want. I'm making it full width
+<ion-pane class="Payment checkout">
+    <ion-view>
+        <div class="bar bar-header bar-light">
+            <a class="button icon-left ion-chevron-left button-clear" href="#/app/payment"> Back</a>
+            <h1 class="title"><img src="img/small_logo.png" /></h1>
+        </div>
+        <div class="container">
+            <ul class="list">
+                <li class="item">
+                    <b>Payment Amount of : <span>&#8377</span> {{item.outstanding_amount}}</b>
+                </li>
+            </ul>
+            <div class="row">
+                <!-- You can make it whatever width you want. I'm making it full width
 on <= small devices and 4/12 page width on >= medium devices -->
-<div class="col-xs-12 col-md-4">
+                <div class="col-xs-12 col-md-4" style="padding-left:0px;padding-right:0px;">
+                    <!-- CREDIT CARD FORM STARTS HERE -->
+                    <div class="panel panel-default credit-card-box">
+                        <div class="panel-heading display-table">
+                            <div class="row display-tr">
+                                <h3 class="panel-title display-td">Payment Details</h3>
+                                <div class="display-td">
+                                    <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <form  name="loginForm" class="loginForms" validate  >
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label for="cardNumber">CARD NUMBER</label>
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" name="ca" placeholder="Valid Card Number" autocomplete="cc-number" required autofocus />
+                                                <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
 
+                                                 <span class="help-inline" ng-show="submitted && loginForm.ca.$error.required">CARD NUMBER Required</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-7 col-md-7">
+                                        <div class="form-group">
+                                            <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+                                            <select class="dcExpMonth form-control col-md-5  combobox required" id="dcExpMonth" name="ccExpiryMonth">
+                                                <option value="0">MM</option>
+                                                <option value="01">01</option>
+                                                <option value="02">02</option>
+                                                <option value="03">03</option>
+                                                <option value="04">04</option>
+                                                <option value="05">05</option>
+                                                <option value="06">06</option>
+                                                <option value="07">07</option>
+                                                <option value="08">08</option>
+                                                <option value="09">09</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                            </select>
+                                            <select class="dcExpYear form-control  col-md-5 combobox required" id="dcExpYear" name="ccExpiryYear" >
+                                                <option value="0">YY</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2018">2018</option>
+                                                <option value="2019">2019</option>
+                                                <option value="2020">2020</option>
+                                                <option value="2021">2021</option>
+                                                <option value="2022">2022</option>
+                                                <option value="2023">2023</option>
+                                                <option value="2024">2024</option>
+                                                <option value="2025">2025</option>
+                                                <option value="2026">2026</option>
+                                                <option value="2027">2027</option>
+                                                <option value="2028">2028</option>
+                                                <option value="2029">2029</option>
+                                                <option value="2030">2030</option>
+                                                <option value="2031">2031</option>
+                                                <option value="2032">2032</option>
+                                                <option value="2033">2033</option>
+                                                <option value="2034">2034</option>
+                                                <option value="2035">2035</option>
+                                                <option value="2036">2036</option>
+                                                <option value="2037">2037</option>
+                                                <option value="2038">2038</option>
+                                                <option value="2039">2039</option>
+                                                <option value="2040">2040</option>
+                                                <option value="2041">2041</option>
+                                                <option value="2042">2042</option>
+                                                <option value="2043">2043</option>
+                                                <option value="2044">2044</option>
+                                                <option value="2045">2045</option>
+                                                <option value="2046">2046</option>
+                                                <option value="2047">2047</option>
+                                                <option value="2048">2048</option>
+                                                <option value="2049">2049</option>
+                                                <option value="2050">2050</option>
+                                                <option value="2051">2051</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-5 col-md-5 pull-right">
+                                        <div class="form-group">
+                                            <label for="cardCVC">CV CODE</label>
+                                            <input type="number" min="0" step="4"  class="form-control" name="cardCVC" placeholder="CVC"  autocomplete="cc-csc" required />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                       <ion-list>
+                                       <div class=" item-text-wrap text-left" style=" font-size: 14px;">
 
-<!-- CREDIT CARD FORM STARTS HERE -->
-<div class="panel panel-default credit-card-box">
-<div class="panel-heading display-table" >
-<div class="row display-tr" >
-<h3 class="panel-title display-td" >Payment Details</h3>
-<div class="display-td" >                            
-<img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
-</div>
-</div>                    
-</div>
-<div class="panel-body">
-<form role="form" id="payment-form">
-<div class="row">
-<div class="col-xs-12">
-<div class="form-group">
-<label for="cardNumber">CARD NUMBER</label>
-<div class="input-group">
-<input 
-type="tel"
-class="form-control"
-name="cardNumber"
-placeholder="Valid Card Number"
-autocomplete="cc-number"
-required autofocus 
-/>
-<span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
-</div>
-</div>                            
-</div>
-</div>
-<div class="row">
-<div class="col-xs-7 col-md-7">
-<div class="form-group">
-<label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
-<input 
-type="tel" 
-class="form-control" 
-name="cardExpiry"
-placeholder="MM / YY"
-autocomplete="cc-exp"
-required 
-/>
-</div>
-</div>
-<div class="col-xs-5 col-md-5 pull-right">
-<div class="form-group">
-<label for="cardCVC">CV CODE</label>
-<input 
-type="tel" 
-class="form-control"
-name="cardCVC"
-placeholder="CVC"
-autocomplete="cc-csc"
-required
-/>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-xs-12">
-<div class="form-group">
-<label for="couponCode">COUPON CODE</label>
-<input type="text" class="form-control" name="couponCode" />
-</div>
-</div>                        
-</div>
-<div class="row">
-<div class="col-xs-12">
-<a href="#/app/thanks">
-<button class="btn btn-success btn-lg btn-block" type="submit" ng-click"thanks()">PAY NOW</button></a>
-</div>
-</div>
-<div class="row" style="display:none;">
-<div class="col-xs-12">
-<p class="payment-errors"></p>
-</div>
-</div>
-</form>
-</div>
-</div>            
-<!-- CREDIT CARD FORM ENDS HERE -->
-
-
-</div>            
-
-
-
-</div>
-</div>
-</ion-view></ion-pane>
+									  <ion-checkbox ng-model="filter.red"><span class="text-left" style="text-align: left;">Save this card for faster checkout </span></ion-checkbox>
+									 	</div>
+	
+									</ion-list>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">                                      
+                                            <button class="btn btn-success btn-lg btn-block" data-ng-click="thanks()"  type="submit" >PAY NOW</button>
+                                       
+                                    </div>
+                                </div>
+                             
+                            </form>
+                        </div>
+                    </div>
+                    <!-- CREDIT CARD FORM ENDS HERE -->
+                </div>
+            </div>
+        </div>
+    </ion-view>
+</ion-pane>

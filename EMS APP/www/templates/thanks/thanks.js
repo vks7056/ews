@@ -6,6 +6,13 @@ angular.module('starter.controllers', [])
 
 .controller('paymentCtrl', function($scope, $state) {
 
+$scope.backToHome = function() { 
+  $state.go($state.current, {}, {reload: true});
+  $state.go('/',null,{reload:true});
+  localStorage.clear();
+
+}
+
   
 });
 

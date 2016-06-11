@@ -4,6 +4,16 @@ angular.module('starter.controllers')
   $state.go('app.payment');
 }
 
+$scope.logout = function() {   
+  $state.go($state.current, {}, {reload: true});
+  $state.go('/');
+  localStorage.clear();
+  $scope.loginData.ca = '';
+  $scope.loginData.mobile = '';
+  $state.go('/login', null, {reload: true});
+
+}
+
   // Setup the loader
   $ionicLoading.show({
     content: 'Loading',

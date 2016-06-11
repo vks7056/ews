@@ -28,7 +28,7 @@ angular.module('starter', ['ionic', 'starter.controllers' , 'ngOpenFB','ngMessag
         url: "/app",
         cache: false,
         abstract: true,
-        templateUrl: "templates/menu.html"       
+        templateUrl: "templates/menu.html"      
     })
 
     .state('app.home', {
@@ -58,7 +58,8 @@ angular.module('starter', ['ionic', 'starter.controllers' , 'ngOpenFB','ngMessag
       url: '/checkout',
       views: {
         'menuContent' : {
-          templateUrl: 'templates/checkout/checkout.html'
+          templateUrl: 'templates/checkout/checkout.html',
+          controller: 'checkoutCtrl'
         }
       }
     })
