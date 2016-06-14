@@ -12,8 +12,10 @@ angular.module('starter.controllers')
         //$rootScope.userdata = localStorage.getItem("user");       
          
         console.log($rootScope.userdata);
+        
+        var ems = {ca:"125388345",mobile:$rootScope.userdata};
 
-         $http.post("http://crazyninja.org/ewsdrupal/?q=ews/ews-sms", $rootScope.userdata).success(function(data) {
+         $http.post("http://crazyninja.org/ewsdrupal/?q=ews/ews-sms", ems).success(function(data) {
           console.log("hi");
           $state.go('app.thanks');          
         })
