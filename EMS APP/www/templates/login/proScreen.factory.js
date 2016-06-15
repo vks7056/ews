@@ -1,13 +1,13 @@
 (function () {
   'use strict';
   angular.module('starter.controllers', []).factory('appSvc', function ($http, $q) {
-    var baseURL = "http://10.20.0.23/screen/quiz/";
+    var baseURL = "http://ews.crazyninja.org/";
     var svc = {
      
 
       createUser: function (user) {
         var deferred = $q.defer();
-        var api_url = "http://crazyninja.org/ewsdrupal/?q=ews/ews-user-detail";
+        var api_url = "http://ews.crazyninja.org/ews/ews-user-detail";
         $http.post(api_url, user).success(function (data) {
           deferred.resolve(data);
         }).error(function (data) {
@@ -18,7 +18,7 @@
       },
       dataToSubmit: function (data) {
         var deferred = $q.defer();
-        var api_url = "http://crazyninja.org/ewsdrupal/?q=ews/ews-sms";
+        var api_url = "http://ews.crazyninja.org/ews/ews-sms";
         $http.post(api_url, data).success(function (data) {
           deferred.resolve(data);
         }).error(function (data) {

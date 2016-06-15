@@ -15,7 +15,7 @@ angular.module('starter.controllers')
         
         var ems = {ca:"125388345",mobile:$rootScope.userdata};
 
-         $http.post("http://crazyninja.org/ewsdrupal/?q=ews/ews-sms", ems).success(function(data) {
+         $http.post("http://ews.crazyninja.org/ews/ews-sms", ems).success(function(data) {
           console.log("hi");
           $state.go('app.thanks');          
         })
