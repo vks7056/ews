@@ -4,7 +4,7 @@
  <div class="hamburger" side="left">
    <button menu-toggle="left" class="button button-icon ion-navicon show" ></button></div> 
    <img src="img/mukesh.png" />  
-   <h2 class="title"> Hi Mukesh ({{CaName}})</h2> 
+   <h2 class="title"> Hi User ({{CaName}})</h2> 
    
 
  </ion-header-bar>
@@ -16,14 +16,14 @@
   </a>
 </div>
 <div class="item item-text-wrap text-center usage">
-	Your Usage as on 31st May, 12:45 pm
+	Your Usage as on {{item.current_time}}
 </div>
 <div class="item item-text-wrap text-center consumed">
- Consumed <h3> <span style=" top: -7px;left:-11px;font-size: 15px;">004</span> {{item.current_meter_reading}} </h3> <span>Kilowatts({{item.unit}})</span>
+ Consumed <h3> <span style=" top: -7px;left:-11px;font-size: 15px;"></span> {{item.current_meter_reading}} </h3> <span>Kilowatts({{item.unit}})</span>
 </div>
 
 <div class=" item text-center">
-	10 days till next bill cycles
+	{{item.bill_cycle}} days till next bill cycles
 </div>
 <div class=" item text-center">
   <h2 class="billing">Billing Summary</h2>
@@ -45,14 +45,14 @@
   <div class="item item-text-wrap">
   <div class="row">
     <div class="col col-50" style="border-right: solid 1px #ccc; margin-right: 10px;">LATEST BILL <br>
-    <h3><span>&#8377 </span>{{item.latest_amount}} </h3>April'16</div>
+    <h3><span>&#8377 </span>{{item.latest_amount}} </h3>{{item.current_month}}</div>
     <div class="col col-50">LAST PAYMENT <br>
-    <h3><span>&#8377 </span>{{item.previous_paid_amount}} </h3>April'16</div>
+    <h3><span>&#8377 </span>{{item.previous_paid_amount}} </h3>{{item.previous_month}}</div>
     </div>
 
       <div class="row unbill-amount">
     <div class="col col-70" >UNBILLED AMOUNT <br>
-   As on 14th May, 12:46 PM</div>
+   </div>
     <div class="col col-30">
     <h3><span>&#8377 </span>{{item.unbilled_amount}}</h3></div>
     </div>
